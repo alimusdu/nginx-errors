@@ -14,10 +14,6 @@ FROM debian:stretch
 
 WORKDIR /
 
-RUN apt-get update && \
-    apt install -y ca-certificates && \
-    rm -rf /var/lib/apt/lists/*
-
 COPY --from=builder /src/nginx-errors .
 
 COPY www www
