@@ -71,8 +71,8 @@ jobs:
             org.label-schema.version=v${{ github.event.inputs.version }}
             org.label-schema.name=nginx-errors
           tags: |
-            vietanhs0817/nginx-errors:v${{ github.event.inputs.version }}
-            vietanhs0817/nginx-errors:latest
+            ${{ secrets.DOCKER_USERNAME }}/nginx-errors:v${{ github.event.inputs.version }}
+            ${{ secrets.DOCKER_USERNAME }}/nginx-errors:latest
           cache-from: type=local,src=/tmp/.buildx-cache
           cache-to: type=local,dest=/tmp/.buildx-cache-new
 
