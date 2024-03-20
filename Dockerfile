@@ -10,7 +10,7 @@ COPY . .
 
 RUN CGO_ENABLED=0 GOOS=linux go build -o nginx-errors .
 
-FROM debian:stretch
+FROM debian:bookworm-slim
 
 WORKDIR /
 
