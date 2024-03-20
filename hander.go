@@ -21,6 +21,7 @@ type Response struct {
 }
 
 var ErrorMap = map[int]string{
+	400: "Bad Request",
 	403: "Access Denied",
 	404: "Not Found",
 	413: "Request Too Large",
